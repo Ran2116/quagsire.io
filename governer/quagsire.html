@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>QUAGSIRE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="icon.png">
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            background-color: #000000;
+            /* background-color: rgba(131, 213, 246, 0.2); */
+
+        }
+
+        .vt323-regular {
+            font-family: "VT323", monospace;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #quagsire {
+            z-index: 5;
+            position: absolute;
+            color: #978dab;
+            background-color: rgba(131, 213, 246, 0.3);
+            /* use rgb to change the opacity of the background color */
+            letter-spacing: 2px;
+            text-shadow: 2px -3px 4px #629CBD;
+            border-top: 6px dotted #627BA4;
+            border-bottom: 6px dotted #627BA4;
+            width: 450px;
+            right: 20px;
+            top: 100px;
+            font-size: 30px;
+            font-family: "VT323", monospace;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        #quagsire_capital:link {
+            text-decoration: none;
+            z-index: -5;
+            position: absolute;
+            color: rgb(106, 90, 139, 0.4);
+            letter-spacing: 2px;
+            width: 9vw;
+            height: 3000px;
+            left: -150px;
+            top: 100px;
+            font-size: 1000px;
+            font-family: "VT323", monospace;
+            font-weight: 400;
+            text-align: center;
+            line-height: 1000px;
+        }
+
+        #quagsire_capital:visited {
+            color: black;
+            text-decoration: none;
+            line-height: 1000px;
+        }
+
+        #quagsire_capital:hover {
+            position: absolute;
+            color: rgb(106, 90, 139, 0.6);
+            letter-spacing: 2px;
+            width: 9vw;
+            height: 3000px;
+            left: -150px;
+            top: 100px;
+            font-size: 1000px;
+            font-family: "VT323", monospace;
+            font-weight: 400;
+            text-align: center;
+            font-style: italic;
+            line-height: 1000px;
+        }
+
+        #quagsire_capital:active {
+            position: absolute;
+            color: rgb(106, 90, 139, 0.6);
+            letter-spacing: 2px;
+            width: 9vw;
+            height: 3000px;
+            left: -150px;
+            top: 100px;
+            font-size: 1000px;
+            font-family: "VT323", monospace;
+            font-weight: 400;
+            text-align: center;
+            line-height: 1000px;
+        }
+
+
+        #quagsire_pic {
+            z-index: -10;
+            position: fixed;
+            top: -10px;
+            left: -60px;
+            width: 1000px;
+            opacity: 0.6;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        #water_gif {
+            z-index: -15;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.2;
+        }
+
+        #quagsire_pic2 {
+            z-index: -5;
+            position: absolute;
+            top: 1000px;
+            left: -60px;
+            width: 1000px;
+            opacity: 0.4;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        #quagsire_pic3 {
+            z-index: -2;
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            width: 500px;
+            opacity: 0.4;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        #quagsire_pic4 {
+            z-index: 8;
+            position: fixed;
+            bottom: 5px;
+            right: 2px;
+            width: 280px;
+            opacity: 0.4;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        #quagsire_pic4:hover {
+            z-index: 8;
+            position: fixed;
+            bottom: 5px;
+            right: 2px;
+            width: 280px;
+            opacity: 1;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        #quagsire_gif {
+            z-index: 20;
+            position: fixed;
+            top: 6vh;
+            right: 3vw;
+            height: 18vh;
+            transition: height 4s ease-out;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        #quagsire_gif:hover {
+            height: 60vh;
+        }
+
+        #quagsire_model {
+            z-index: 20;
+            position: absolute;
+            top: 12000px;
+            left: -60px;
+            width: 300px;
+            opacity: 1;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        #quagsire_video {
+            z-index: 11;
+            position: absolute;
+            width: 40vw;
+            top: 9vh;
+            left: 4vw;
+            border-radius: 60px 60px 60px 0px;
+
+        }
+
+        #quagsire_video2 {
+            z-index: 11;
+            position: absolute;
+            width: 40vw;
+            top: 65vh;
+            left: 20vw;
+            border-radius: 60px 60px 60px 0px;
+        }
+
+        #bluemoonfalls {
+            z-index: 4;
+            position: absolute;
+            top: 20vw;
+            left: 14vw;
+            font-size: 200px;
+            opacity: 0.5;
+            transition: transform 4s, opactiy 1s;
+        }
+
+        #bluemoonfalls:hover {
+            transform: scale(1.2);
+            opacity: 1;
+            color: #99a2db
+        }
+
+        #bluemoonfalls_s {
+            z-index: 10;
+            position: absolute;
+            top: 1000px;
+            left: 5vw;
+            width: 10vw;
+            font-size: 20px;
+            transition: width 4s;
+        }
+
+        #bluemoonfalls_s:hover {
+            background-color: rgba(131, 213, 246, 0.8);
+            width: 50vw;
+        }
+
+        #bluemoonfalls_explanation {
+            position: absolute;
+            z-index: 10;
+            top: 600px;
+            left: 5vw;
+            width: 10vw;
+            font-size: 18px;
+        }
+
+        #bluemoonfalls_explanation:hover {
+            background-color: rgba(131, 213, 246, 0.8);
+        }
+
+
+        .bluemoonfalls {
+            color: white;
+            background-color: rgba(131, 213, 246, 0.3);
+            /* use rgb to change the opacity of the background color */
+            letter-spacing: 2px;
+            border-radius: 20px;
+            font-family: "VT323", monospace;
+            border: 1vw dotted #8362a4;
+            text-align: center;
+        }
+
+        .colorchange img {
+            transition: filter 4s ease-in-out;
+            filter: saturate(0.3) hue-rotate(0deg);
+        }
+
+        .colorchange:hover img {
+            filter: saturate(1) hue-rotate(80deg);
+        }
+
+        .highlight {
+            color: #ff00f7;
+        }
+
+        .quagsire_grid {
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            top: 1000px;
+            left: 280px;
+            max-width: 700px;
+        }
+
+        .quagsire_grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .quagsire_grid img:hover {
+        opacity: 1;
+}
+
+
+
+        .blur {
+            filter: blur(4px);
+        }
+
+        .brightness {
+            filter: brightness(250%);
+        }
+
+        .contrast {
+            filter: contrast(180%);
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .huerotate {
+            filter: hue-rotate(180deg);
+        }
+
+        .invert {
+            filter: invert(100%);
+        }
+
+        .opacity {
+            filter: opacity(50%);
+        }
+
+        .saturate {
+            filter: saturate(7);
+        }
+
+        .sepia {
+            filter: sepia(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <img id="quagsire_pic" src="quagsire_pokemon.gif">
+    <img id="quagsire_pic2" src="quagsire_pokemon2.gif">
+    <img id="quagsire_pic3" src="quagsire-quag.gif">
+    <div class="colorchange">
+        <img id="quagsire_gif" src="quagsire-quag.gif">
+    </div>
+    <img id="water_gif" src="water.gif">
+    <video loop controls id="quagsire_video" src="Quagsire.mp4" type="video/mp4"></video>
+    <video loop controls id="quagsire_video2" src="quagsire_video2.mp4" type="video/mp4"></video>
+    <div class="colorchange">
+        <a href="https://www.youtube.com/watch?v=buc64u6Q_oA"><img id="quagsire_pic4" src="quagsire_pokemon3.png"></a>
+    </div>
+    <div class="quagsire_grid">
+        <img class="blur" src="quagsire_default.webp" alt="Quagsire">
+        <img class="brightness" src="quagsire_default.webp" alt="Quagsire">
+        <img class="contrast" src="quagsire_default.webp" alt="Quagsire">
+        <img class="grayscale" src="quagsire_default.webp" alt="Quagsire">
+        <img class="huerotate" src="quagsire_default.webp" alt="Quagsire">
+        <img class="invert" src="quagsire_default.webp" alt="Quagsire">
+        <img class="opacity" src="quagsire_default.webp" alt="Quagsire">
+        <img class="saturate" src="quagsire_default.webp" alt="Quagsire">
+        <img class="sepia" src="quagsire_default.webp" alt="Quagsire">
+    </div>
+
+
+    <div><a id="quagsire_capital"
+            href="https://bulbapedia.bulbagarden.net/wiki/Quagsire_(Pok%C3%A9mon)">Quagsire<br>encounters are boosted
+            during Rain and Sunny weather.</a></div>
+    <div class="bluemoonfalls" id="bluemoonfalls">BLUEMOONFALLS<br>QUAGSIRE</div>
+    <div class="bluemoonfalls" id="bluemoonfalls_s">While Ash and his friends were resting near Cherrygrove City, the GS
+        Ball they were carrying was taken by a Quagsire. The local Officer Jenny explained that all the Pokémon was
+        doing was taking it to Blue Moon Falls for an annual celebration.<br>
+        Ash, both intrigued and eager to get the Ball back, decided to investigate this further. Later, he and his
+        friends stumbled across Blue Moon Falls. They witnessed hundreds of Quagsire with round-shaped objects. At
+        midnight, they tossed the objects into the air and used Water Gun to send them over the falls. The following
+        morning, all the objects, including the GS Ball, floated safely back down stream.</div>
+    <div class="bluemoonfalls" id="bluemoonfalls_explanation">Blue Moon Falls is an animated series-exclusive location
+        in Johto. It is located close to Cherrygrove City.</div>
+
+    <div id="quagsire">
+        <span class="highlight">Quagsire </span> <br> is a light blue, bipedal, amphibious Pokémon. Its head is broad
+        and round, having little neck to distinguish it from the rest of its body. It has a wide mouth and tiny, black
+        eyes. A wavy, purple stripe runs down its back. Along its spine is a dark blue fin, which is larger on the male
+        than on the female. <span class="highlight">Quagsire </span> 's hands and feet both have three digits. Its outer
+        layer of skin is slimy and slippery. <span class="highlight">Quagsire </span> shares many similarities with its
+        Paldean relative, Clodsire.<br>
+        <span class="highlight">Quagsire </span> is carefree and sluggish by nature, although it is protective towards
+        Wooper. An unintelligent Pokémon,it tends to bump its head inadvertently while swimming and seems not to care.
+        It hunts for food by leaving its mouth wide open in water and waiting for its unaware prey to blunder in.
+        Because <span class="highlight">Quagsire </span> does not move, it does not get very hungry and can afford to
+        wait for its food. <br>
+        As shown in Pokémon Sleep, <span class="highlight">Quagsire </span> leaves its mouth open even as it sleeps. It
+        is said seeing a <span class="highlight">Quagsire </span> asleep with its mouth wide open is a sign it’s
+        possbily waiting for prey, while it dreams. <span class="highlight">Quagsire </span> lives in clean bodies of
+        freshwater, as well as muddy swamps. During the day, <span class="highlight">Quagsire </span> avoids sunlight by
+        submerging itself in the water.
+    </div>
+
+
+    <!-- <div> I want half a wheel </div> -->
+</body>
+
+</html>
+
+
+<!-- image souces: pic:https://tenor.com/view/quagsire-quagy-quagsire-quagsire-cheer-gif-18674387 -->
+<!-- pic2:https://tenor.com/view/quagsire-pokemon-gif-27147159 -->
+<!-- pic3:https://tenor.com/view/quagsire-quag-nuo-nuoh-pokemon-gif-22234133 -->
+<!-- https://www.youtube.com/watch?v=nTyFRzOtm3Y&t=5s -->
+<!-- https://www.youtube.com/watch?v=fmF-8w8yi78 -->
+<!-- icon:https://game8.co/games/Pokemon-TCG-Pocket/archives/548795 -->
+<!-- textsource:https://bulbapedia.bulbagarden.net/wiki/Quagsire_(Pok%C3%A9mon) -->
+ <!-- filter:https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_filters -->
+  <!-- https://www.ign.com/wikis/pokemon-go/Quagsire -->
